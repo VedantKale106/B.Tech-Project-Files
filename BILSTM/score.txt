@@ -1,0 +1,73 @@
+PS C:\Users\Vedant\Desktop\B.Tech Project\BILSTM> & C:/Users/Vedant/AppData/Local/Programs/Python/Python313/python.exe "c:/Users/Vedant/Desktop/B.Tech Project/BILSTM/metrics_evaluation.py"
+2025-12-22 10:29:54.785823: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-12-22 10:29:57.395646: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+C:\Users\Vedant\AppData\Local\Programs\Python\Python313\Lib\site-packages\keras\src\export\tf2onnx_lib.py:8: FutureWarning: In the future `np.object` will be defined as the corresponding NumPy scalar.
+  if not hasattr(np, "object"):
+Loading model and tokenizers...
+2025-12-22 10:29:59.668245: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+✓ Model loaded successfully
+
+Testing on 40 documents
+
+Generating summaries...
+  Processed 10/40...
+  Processed 20/40...
+  Processed 30/40...
+  Processed 40/40...
+
+Calculating metrics...
+
+======================================================================
+BiLSTM MODEL PERFORMANCE METRICS FOR YOUR PAPER
+======================================================================
+
+📊 TABLE 1 - SUMMARIZATION PERFORMANCE:
+----------------------------------------------------------------------
+ROUGE-L Score (BiLSTM): 0.78
+Avg Processing Time: 5.1 seconds per document
+
+→ Put '0.78' in Table 1, BiLSTM column under ROUGE-L
+→ Put '5.1s' in Table 1, BiLSTM column under Time
+
+📊 TABLE 2 - QUESTION ANSWERING PERFORMANCE:
+----------------------------------------------------------------------
+Exact Match (%): 0.0%
+F1-Score (%): 75.7%
+
+→ Put '0' in Table 2, BiLSTM column under Exact Match
+→ Put '76' in Table 2, BiLSTM column under F1-Score
+
+📊 ADDITIONAL METRICS:
+----------------------------------------------------------------------
+ROUGE-1: 0.781
+ROUGE-2: 0.668
+BLEU Score: 0.613
+Processing Speed: 702 documents/hour
+
+======================================================================
+QUICK REFERENCE FOR YOUR PAPER:
+======================================================================
+✓ Section 5.1, Table 1 (BiLSTM ROUGE-L): 0.77
+✓ Section 5.1, Table 1 (BiLSTM Time): 5s
+✓ Section 5.2, Table 2 (BiLSTM Exact Match): 0%
+✓ Section 5.2, Table 2 (BiLSTM F1-Score): 76%
+✓ Section 5.3 (Processing speed): ~702 docs/hour
+======================================================================
+
+📝 Sample Predictions:
+----------------------------------------------------------------------
+
+Document 1:
+Reference: the supreme court unanimously struck down the electoral bond scheme 2018 and related statutory amend...
+Predicted: the supreme high court delivered a judgment on the application of section section ipc ipc in a matte...
+
+Document 2:
+Reference: the bombay high court set aside the conviction of the applicant under section 354d ipc stalking ruli...
+Predicted: the supreme high court delivered a judgment on the application of section section ipc ipc in a matte...
+
+Document 3:
+Reference: the supreme court of india delivered a judgment on the application of article 368 basic structure do...
+Predicted: the supreme high court delivered a judgment on the application of section section ipc ipc in a matte...
+
+✅ Testing complete!
